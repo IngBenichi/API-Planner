@@ -9,6 +9,10 @@ CORS(app, resources={r"/*": {"origins": "https://planner-binary.onrender.com/"}}
 
 proyecto = Proyecto(nombre="Shoot") 
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Bienvenido al API de Benichi."})
+
 @app.route('/tarea', methods=['POST'])
 def agregar_tarea_endpoint():
     try:
