@@ -16,9 +16,6 @@ def home():
 @app.route('/tarea', methods=['POST'])
 def agregar_tarea_endpoint():
     try:
-        if len(tareas) >= 2:
-            return jsonify({"error": "Solo se pueden agregar dos tareas."}), 400
-
         data = request.json
         if not data:
             return jsonify({"error": "No se ha recibido un cuerpo de solicitud."}), 400

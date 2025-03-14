@@ -78,8 +78,6 @@ tareas = []
 
 def agregar_tarea(nombre, descripcion):
     """Agrega una nueva tarea principal."""
-    if len(tareas) >= 2:
-        raise ValueError("Solo se pueden agregar dos tareas.")
 
     if not nombre:
         raise ValueError("El campo 'nombre' es obligatorio.")
